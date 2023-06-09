@@ -1,6 +1,6 @@
 <h1>神威汨罗之光——XJ八股文生成器 2.2</h1>
 <p>最近更新：2023/3/24</p>
-<p><strong>增加白名单机制，密码问 qst 要。</strong></p>
+<p><strong>增加白名单机制。</strong></p>
 <p><strong>增加恢复机制。</strong></p>
 <p>使用 Flask-BootStrap 编写。</p>
 <p>当前只使用双关键字关系类话题，还未完善。</p>
