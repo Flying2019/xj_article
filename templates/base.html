@@ -1,0 +1,31 @@
+{% extends "bootstrap/base.html" %}
+{% import "bootstrap/wtf.html" as wtf %}
+{% block styles %}
+{{ super() }}
+    <style>
+        .small_div {font-size: 10px; position: relative; font-family: initial;}
+        .article_div {margin: 10px;background: #eeecf5;box-shadow: 1px 1px 2px #a7a8ad;}
+        .form_div {margin: 10px;background: #d6c6eb;box-shadow: 1px 1px 2px #a7a8ad;}
+        .link {margin: 5%;}
+        .link:hover {background: #e4e4e6;}
+        p{text-indent:2em}
+    </style>
+    <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='favicon.ico') }}">
+{% endblock %}
+{% block title %}XJ八股文生成器{% endblock %}
+{% block content %}
+<div style="margin: 5% 8%; border-style: solid; padding: 5% 3%; background-color: rgb(231, 243, 246);">
+<h2 style="text-align: center;">
+<a class="link" href="/">生成</a>
+<a class="link" href="/upd">语料</a>
+<a class="link" href="/tag">标签</a>
+<a class="link" href="/qry">反馈</a>
+<a class="link" href="/about">关于</a>
+<a class="link" href="/recover">恢复</a>
+</h2>
+<div class="small_div">
+{% block page_content %}
+{% endblock %}
+</div>
+</div>
+{% endblock %}

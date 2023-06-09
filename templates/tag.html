@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<p>
+    <table border="1" style="text-align: center;">
+    <tr>
+        <th>标签</th><th>操作</th>
+    </tr>
+    {% for x in tags %}
+    <tr>
+        <td>{{x}}</td>
+        <td>
+            <a href="/tag/erasetag?id={{loop.index0}}">删除</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+</p>
+<p>
+    <table border="1" style="text-align: center;">
+    <tr>
+        <th>类型</th><th>有无标签</th><th>操作</th>
+    </tr>
+    {% for x in types %}
+    <tr>
+        <td>{{x[0]}}</td>
+        <td>{{x[1]}}</td>
+        <td>
+            <a href="/tag/erasetype?id={{loop.index0}}">删除</a>
+        </td>
+    </tr>
+    {% endfor %}
+    </table>
+</p>
+<p class="form_div">{{ wtf.quick_form(form) }}</p>
+{% endblock %}

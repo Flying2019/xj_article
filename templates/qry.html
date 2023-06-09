@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<p class="form_div">{{ wtf.quick_form(form) }}</p>
+<p>
+<table border="1">
+    <tr>
+        <th>number</th><th>text</th><th>ip</th><th>state</th>
+    </tr>
+    {% for s in qrys %}
+    <tr>
+        <td>{{ loop.index }}</td><td>{{ s.text }}</td><td>{{ s.ip }}</td><td>{{ s.now }}</td>
+    </tr>
+    {% endfor %}
+</table>
+</p>
+{% endblock %}

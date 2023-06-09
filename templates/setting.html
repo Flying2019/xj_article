@@ -1,0 +1,24 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<p>
+<table border="1">
+    <tr>
+        <th>地址</th><th>操作</th>
+    </tr>
+    {% for s in texts %}
+    <tr>
+        <td>{{s}}</td>
+        <td>
+            {% if texts[s] %}
+            允许
+            <a href="/setting/reject?ip={{s}}&pwd={{pwd}}">拒绝</a>
+            {% else %}
+            <a href="/setting/accept?ip={{s}}&pwd={{pwd}}">允许</a>
+            拒绝
+            {% endif %}
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</p>
+{% endblock %}

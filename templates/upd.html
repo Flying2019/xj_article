@@ -1,0 +1,31 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<p class="form_div">{{ wtf.quick_form(form) }}</p>
+<p>
+<table border="1">
+    <tr>
+        <th>type</th><th>text</th><th>tag</th><th>operation</th>
+    </tr>
+    {% for s in texts %}
+    <tr>
+        <td>
+            {% for v in s.type %}
+            {{v}}&nbsp;
+            {% endfor %}
+        </td>
+        <td>{{ s.text }}</td>
+        <td>
+            {% for v in s.tag %}
+            {{v}}&nbsp;
+            {% endfor %}
+        </td>
+        <td>
+            <a href="/erase?id={{loop.index0}}">删除</a>&nbsp;
+            <a href="/upd?id={{loop.index0}}">修改</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</p>
+<button onclick="window.location.replace('backup')">备份</button>
+{% endblock %}

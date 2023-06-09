@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block page_content %}
+<p>
+<table border="1">
+    <tr>
+        <th>type</th><th>text</th><th>tag</th><th>operation</th>
+    </tr>
+    {% for s in texts %}
+    <tr>
+        <td>
+            {% for v in s.type %}
+            {{v}}&nbsp;
+            {% endfor %}
+        </td>
+        <td>{{ s.text }}</td>
+        <td>
+            {% for v in s.tag %}
+            {{v}}&nbsp;
+            {% endfor %}
+        </td>
+        <td>
+            <a href="/recover?id={{loop.index0}}&opt=0">恢复</a>
+            <a href="/recover?id={{loop.index0}}&opt=1">删除</a>
+        </td>
+    </tr>
+    {% endfor %}
+</table>
+</p>
+{% endblock %}

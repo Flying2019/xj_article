@@ -1,0 +1,4 @@
+.gradual-button { padding: 0.5em 1em; text-align: center; border-radius: 0px; border-width: 0px; background-color: rgba(190, 190, 190, 0.6); transition-delay: 0s; transition-duration: 0.25s; transition-timing-function: ease-in-out; margin-left: 15px; }
+.gradual-button:hover { cursor: pointer; background-color: rgba(138, 138, 138, 0.7); transition-delay: 0s; transition-duration: 0.25s; transition-timing-function: ease-in-out; }
+.underline-input { border-top: none; border-right: none; border-left: none; border-image: initial; border-bottom: 1px groove rgb(0, 153, 153); outline: none; transition-delay: 0s; transition-duration: 0.25s; transition-timing-function: ease-in-out; }
+.underline-input:focus-visible { border-bottom: 1px groove rgb(0, 204, 204); transition-delay: 0s; transition-duration: 0.25s; transition-timing-function: ease-in-out; }
